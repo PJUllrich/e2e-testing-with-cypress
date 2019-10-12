@@ -1,0 +1,8 @@
+<div class="phx-hero">
+  
+  <%= if @name do %>
+    <%= render "table.html", assigns %>
+  <% else %>
+    <%= render "intro.html", assigns %>
+  <% end %>
+</div>

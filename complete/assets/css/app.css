@@ -1,0 +1,59 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+
+/* ---------------------------------------------------------------- */
+
+.phx-hero {
+  width: 700px;
+}
+
+/* ---------------------------------------------------------------- */
+
+table {
+  table-layout: fixed;
+}
+
+table td, th {
+  text-align: center;
+  width: 2rem;
+}
+
+table .col-actions {
+  width: 3rem;
+}
+
+.table-sum td {
+  border-top: 1px solid;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+
+.btn {
+  height: 3rem;
+  line-height: unset;
+  margin: 1.5rem 0;
+}
+
+.btn-dec {
+  background-color: red;
+  border-color: red;
+}
+
+.center-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background-color: white !important;
+  text-align: center;
+  max-width: 200px;
+}
+
+button {
+  margin: 3rem 0;
+}

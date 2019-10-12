@@ -1,0 +1,30 @@
+<h2 data-cy=table-name><%= @name %></h2>
+<table id="table-items">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th class="col-actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for item <- @items do %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= pad(item.price) %>€</td>
+        <td data-cy="quantity"><%= item.quantity %></td>
+        <td class="col-actions">
+          <button phx-click="dec" value="<%= item.id %>" class="btn btn-dec" data-cy="btn-dec">-</button>
+          <button phx-click="inc" value="<%= item.id %>" class="btn btn-inc" data-cy="btn-inc">+</button>
+        </td>
+      </tr>
+    <% end %>
+    <tr class="table-sum">
+      <td>Sum</td>
+      <td data-cy="sum"><%= Enum.reduce(@items, 0, fn item, acc -> acc + (item.price * item.quantity) end) |> pad() %>€</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
