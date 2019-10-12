@@ -1,4 +1,4 @@
-# E2eWithCypress
+# End-2-End Testing with Cypress
 
 To start your Phoenix server:
 
